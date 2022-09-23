@@ -63,17 +63,17 @@ The classes needed to write tests are to be found in the 'unittest' module. Unit
 ### Creating a Unit Test
 The steps for writing any unit test is as follows: 
 
-− Import the unittest module in your program.
+- Import the unittest module in your program.
 
-− Define a function to be tested or import a function.
+- Define a function to be tested or import a function.
 
-− Create a testcase by subclassing unittest.TestCase.
+- Create a testcase by subclassing unittest.TestCase.
 
-− Define a test as a method inside the class. Name of method must start with 'test'.
+- Define a test as a method inside the class. Name of method must start with 'test'.
 
-− Each test calls assert function of TestCase class. There are many types of asserts. 
+- Each test calls assert function of TestCase class. There are many types of asserts. 
 
-− Finally, call main() method from the unittest module.
+- Finally, call main() method from the unittest module.
 
 ### Steps to run a unit test
 
@@ -89,6 +89,20 @@ The steps for writing any unit test is as follows:
 - To run all the test present in the folder, use this command:
 ```sh
   python -m unittest discover -v
+  ```
+
+### Sample Unit Test
+```sh
+  import unittest
+def add(x,y):
+   return x + y
+   
+class SimpleTest(unittest.TestCase):
+   def testadd1(self):
+      self.assertEquals(add(4,5),9)
+      
+if __name__ == '__main__':
+   unittest.main()
   ```
 
 
