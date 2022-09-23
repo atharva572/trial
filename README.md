@@ -51,12 +51,12 @@ customers that are about to churn.
 - <b>Storage:</b> Azure blob
 
 
-## Steps for Pytest Implementation
+## Unittest Implementation
 
-- **What is Unit Testing?** : Unit Testing is the first level of software testing where the smallest testable parts of a software are tested. This is used to validate that each unit of the software performs as designed.
+- **What is Unit Testing?** : Unit Testing is the first level of software testing where the smallest testable parts of a software are tested. The testable parts can be a function, a subroutine, a method or property. Unit Testing is used to validate that each unit of the software performs as designed.
 
 ### Environment Setup
-The classes needed to write tests are to be found in the 'unittest' module. Unittest module is now a part of the standard Python distribution; it requires no separate installation.
+The classes needed to write tests are to be found in the 'unittest' module. To install unit test, run the following command in the terminal.
 ```sh
   pip install unittest
   ```
@@ -93,16 +93,16 @@ The steps for writing any unit test is as follows:
 
 ### Sample Unit Test
 ```sh
-  import unittest
+import unittest
 def add(x,y):
-   return x + y
+  return x + y
    
 class SimpleTest(unittest.TestCase):
-   def testadd1(self):
-      self.assertEquals(add(4,5),9)
+def testadd1(self):
+  self.assertEquals(add(4,5),9)
       
 if __name__ == '__main__':
-   unittest.main()
+  unittest.main()
   ```
 
 
