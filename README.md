@@ -50,6 +50,48 @@ customers that are about to churn.
 - <b>DataBase Warehouse:</b> Snowflake DB
 - <b>Storage:</b> Azure blob
 
+
+## Steps for Pytest Implementation
+
+- **What is Unit Testing?** : Unit Testing is the first level of software testing where the smallest testable parts of a software are tested. This is used to validate that each unit of the software performs as designed.
+
+### Environment Setup
+The classes needed to write tests are to be found in the 'unittest' module. Unittest module is now a part of the standard Python distribution; it requires no separate installation.
+```sh
+  pip install unittest
+  ```
+### Creating a Unit Test
+The steps for writing any unit test is as follows: 
+
+− Import the unittest module in your program.
+
+− Define a function to be tested or import a function.
+
+− Create a testcase by subclassing unittest.TestCase.
+
+− Define a test as a method inside the class. Name of method must start with 'test'.
+
+− Each test calls assert function of TestCase class. There are many types of asserts. 
+
+− Finally, call main() method from the unittest module.
+
+### Steps to run a unit test
+
+- To run a single test class, you use the following command:
+```sh
+  python -m unittest <test_package.test_module.TestClass> -v
+  ```
+
+- To run the test cases present in a single file, use the following command:
+```sh
+  python -m unittest <testfilename> -v
+  ```
+- To run all the test present in the folder, use this command:
+```sh
+  python -m unittest discover -v
+  ```
+
+
 ## Getting-started
 
 The quickest way of getting started with this project is to clone this repository into your local machine by the
